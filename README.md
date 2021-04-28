@@ -1,0 +1,1 @@
+Drag the index.html icon from the explorer to the web browser. Thanks. 
