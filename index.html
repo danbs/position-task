@@ -1,200 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="no-js">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Ensign College - HR Assignment</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  <title>Icebreaker</title>
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
 </head>
+<style type="text/css">
+    #the-canvas {
+  border: 1px solid black;
+  direction: ltr;
+}
+</style>
 
-<body style="background: #e6e6e4">
+<body style="margin:0px">
+    <!--<iframe id='pdf_iframe' src="https://www.bellcold.com/wp-content/uploads/2021/05/May-21-IB.pdf" style="width: 100%; height: 1000px;"></iframe>-->
+    <!--<iframe src="https://drive.google.com/file/d/1ulpXAuyPkuMgdDWKvqPSuNjPpTM8sRfk/preview" width="640" height="480"></iframe>-->
+   
+   <!--<iframe id="theFrame" src="https://www.bellcold.com/wp-content/uploads/2021/05/May-21-IB.pdf" style="height:1000px; width:100%;"></iframe>-->
+  <h1>PDF.js 'Hello, world!' example</h1>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background: #006241 !important;">
-    <div class="container">
-        <a class="navbar-brand" href="#">Ensign College</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <!--        <h5>Something</h5>-->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <h5 style="color: #fff">HR 101</h5>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<canvas id="the-canvas"></canvas>
+    <script>
+   // If absolute URL from the remote server is provided, configure the CORS
+// header on that server.
+var url = 'https://www.bellcold.com/wp-content/uploads/2021/05/May-21-IB.pdf';
 
-<!-- Page Content -->
-<div class="container p-0">
-    <div class="jumbotron"
-         style="margin: 0px; background-image: url('https://iuploads.scribblecdn.net/c7d252dd-9bf8-4a9e-a267-c103c6802429/global/imagelib/retail_ebook/10679305_cisco_retail_ebook_header_chapter1_1280x400.png')">
-        <h1 class="display-4" style="color: #fff; background: #0000007d; padding: 1em;">
-            <span style="color: #fff; font-weight: 100; font-size: 42px;">Create Organizational Chart (1 hour 30 mins.)</span>
-            <!--            <span style="color: #006241">(1 hour 30 mins.)</span>-->
-        </h1>
-        <!--  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>-->
-        <!--  <hr class="my-4">-->
-        <!--  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
-        <!--  <p class="lead">-->
-        <!--    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
-        <!--  </p>-->
-    </div>
-    <div class="container p-0" style="background: #fff">
-        <div class="row">
-            <div class="col-lg-12 text-left">
-                <br>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                           aria-controls="home" aria-selected="true">Introduction</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                           aria-controls="profile" aria-selected="false">Instructions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                           aria-controls="contact" aria-selected="false">Resources</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="grading-tab" data-toggle="tab" href="#grading" role="tab"
-                           aria-controls="contact" aria-selected="false">Grading</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"
-                         style="padding: 3em;">
-                        <p class="lead">
-                            Marriam-Webster defines a company as an association of persons for carrying on a commercial
-                            or
-                            industrial enterprise. HR has more to do with the persons aspect of business. It is
-                            important to
-                            understand how to manage every part of the process/business because people are at every part
-                            of the
-                            process of doing business. As a human resource representative, you will be making lots of
-                            decisions
-                            for
-                            the companies you work for. In this case, you will make almost all the decisions for your
-                            company as
-                            you
-                            will have the opportunity of making your own company because the rich uncle you never knew
-                            had left
-                            you
-                            money. Your uncle ran away from home when he was young and became a successful business man.
-                            He
-                            wants to
-                            see if you would be a good successor to his very profitable business by giving you money.
-                            You have
-                            100
-                            million dollars to start your own global company. If you’re company is not successful, your
-                            uncle
-                            says
-                            that the company will be sold and he will find someone else to take over his business and he
-                            will
-                            start
-                            an ad campaign that will tell everyone not to hire you as an HR person.
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"
-                         style="padding: 3em;">
-                        <p class="lead">
-                            You will need to design an organization chart for their company. Your uncle gave you the
-                            following
-                            information to start and he wants to see a well-thought-out organizational chart.
-                            <br>
-                            Industry: Technology
-                            <br>
-                            Product/service: Website hosting
-                            <br>
-                            Corporate departments:
-                        <ol>
-                            <li>Sales and marketing</li>
-                            <li>Quality assurance</li>
-                            <li>Finance</li>
-                            <li>HR</li>
-                            <li>IT</li>
-                        </ol>
-                        In this assignment you will be learning about organizational structure so you can better apply
-                        it to
-                        the
-                        business you are making. Different styles of business have different structures that they use so
-                        you
-                        should know about all of them to be better at making decisions.
+// Loaded via <script> tag, create shortcut to access PDF.js exports.
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
 
-                        <br>
-                        <br>
-                        You will have looked at or read or watched the
-                        <a  data-toggle="tab" href="#contact" style="color: #006241; font-weight: bold">resources</a>
-                        provided above, write up your
-                        companies’
-                        org chart. It can be rough since you will be developing it farther, but it is important that
-                        you
-                        have a
-                        rough idea of the org for your uncle asap.
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"
-                         style="padding: 3em;">
-                        <p class="lead">
-                            You should use the following resources to learn about organizational design:
-                            <br>
-                            <a href="https://www.lynda.com/Business-Skills-tutorials/Organization-structure/616665/679373-4.html?org=ldsbc.cas"
-                               style="color: #006241;">“Organization Structure” (3:59)</a>
-                            <br>
-                            <a href="https://www.lynda.com/Business-Skills-tutorials/Organization-structure/616665/679373-4.html?org=ldsbc.cas"
-                               style="color: #006241;">“Draw Organizational Models” (3:11)</a>
-                            <br>
-                            <a href="https://www.lynda.com/Business-Skills-tutorials/Organization-structure/616665/679373-4.html?org=ldsbc.cas"
-                               style="color: #006241;">“What is Organizational Structure?” (2:27, transcript)</a>
-                            <br>
-                            <a href="https://www.lynda.com/Business-Skills-tutorials/Organization-structure/616665/679373-4.html?org=ldsbc.cas"
-                               style="color: #006241;">“The Importance of Organizational Design and Structure”</a>
-                            <br>
-                            <a href="https://www.lynda.com/Business-Skills-tutorials/Organization-structure/616665/679373-4.html?org=ldsbc.cas"
-                               style="color: #006241;">“10 Principles of Organization Design”</a>
-                            <br>
-                            <a href="https://www.lynda.com/Business-Skills-tutorials/Organization-structure/616665/679373-4.html?org=ldsbc.cas"
-                               style="color: #006241;">“Five Questions Every Leader Should Ask About Organizational
-                                Design”</a>
-                        </p>
-                        <p class="lead">
+// The workerSrc property shall be specified.
+pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
-                        </p></div>
-                    <div class="tab-pane fade" id="grading" role="tabpanel" aria-labelledby="profile-tab"
-                         style="padding: 3em;">
-                        <table class="table table-bordered " style="width: 100%">
-                            <tr>
-                                <td>All the details are included</td>
-                                <td>2 points</td>
-                            </tr>
-                            <tr>
-                                <td>Total</td>
-                                <td>Twelve points</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+// Asynchronous download of PDF
+var loadingTask = pdfjsLib.getDocument(url);
+loadingTask.promise.then(function(pdf) {
+  console.log('PDF loaded');
+  
+  // Fetch the first page
+  var pageNumber = 1;
+  pdf.getPage(pageNumber).then(function(page) {
+    console.log('Page loaded');
+    
+    var scale = 1.5;
+    var viewport = page.getViewport({scale: scale});
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.slim.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    // Prepare canvas using PDF page dimensions
+    var canvas = document.getElementById('the-canvas');
+    var context = canvas.getContext('2d');
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
 
+    // Render PDF page into canvas context
+    var renderContext = {
+      canvasContext: context,
+      viewport: viewport
+    };
+    var renderTask = page.render(renderContext);
+    renderTask.promise.then(function () {
+      console.log('Page rendered');
+    });
+  });
+}, function (reason) {
+  // PDF loading error
+  console.error(reason);
+});
+    </script>
+  <!-- Content -->
+  
 </body>
-
 </html>
+
